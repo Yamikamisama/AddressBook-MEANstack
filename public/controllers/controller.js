@@ -34,5 +34,10 @@ $scope.edit = function(id){
 	});
 };
 
+$scope.update = function(){
+	console.log($scope.contact._id);
+	$http.put('/contactlist/' + $scope.contact._id, $scope.contact)
+};
+
 
 }]);
