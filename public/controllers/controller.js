@@ -24,9 +24,15 @@ $scope.remove = function(id){
 	console.log(id);
 	$http.delete('/contactlist/' + id).success(function(response){
 		refresh();
-	})
-}
+	});
+};
 
+$scope.edit = function(id){
+	console.log(id);
+	$http.get('/contactlist/' + id).success(function(response){
+		$scope.contact = response;
+	});
+};
 
 
 }]);
