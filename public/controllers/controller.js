@@ -22,7 +22,9 @@ $scope.addContact = function(){
 
 $scope.remove = function(id){
 	console.log(id);
-	$http.delete('/contactlist/' + id)
+	$http.delete('/contactlist/' + id).success(function(response){
+		refresh();
+	})
 }
 
 
