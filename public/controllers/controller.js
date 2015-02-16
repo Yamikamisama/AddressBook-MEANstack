@@ -39,8 +39,10 @@ $scope.update = function(){
 	$http.put('/contactlist/' + $scope.contact._id, $scope.contact).success(function(response){
 		refresh();
 	});
-
 };
 
+$scope.deselect = function(){
+	$scope.contact = "";
+};
 
 }]);
